@@ -1,5 +1,7 @@
-import { useHistory } from 'react-router-dom'
+import React from 'react'
 import './Login.scss'
+import { useHistory } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
 const Login = (props) => {
     let history = useHistory()
@@ -37,12 +39,15 @@ const Login = (props) => {
                         </span>
                         <hr />
                         <div className='text-center'>
-                            <button
+                            {/* <button
                                 className='btn btn-success'
                                 onClick={() => handleCreateNewAccount()}
                             >
                                 Create new account
-                            </button>
+                            </button> */}
+                            <Link to='/register' className='btn btn-success'>
+                                Create new account
+                            </Link>
                         </div>
                     </div>
                 </div>

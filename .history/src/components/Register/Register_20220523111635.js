@@ -1,13 +1,14 @@
+import React from 'react'
+import './Register.scss'
 import { useHistory } from 'react-router-dom'
-import './Login.scss'
 
-const Login = (props) => {
+const Register = (props) => {
     let history = useHistory()
-    const handleCreateNewAccount = () => {
+    const handleRegister = () => {
         history.push('./register')
     }
     return (
-        <div className='login-container '>
+        <div className='register-container '>
             <div className='container'>
                 <div className='row px-3 px-sm-0'>
                     <div className='content-left col-12 d-none col-sm-7 d-sm-block'>
@@ -29,7 +30,7 @@ const Login = (props) => {
                             className='form-control'
                             placeholder='Password'
                         />
-                        <button className='btn btn-primary'>Login</button>
+                        <button className='btn btn-primary'>Register</button>
                         <span className='text-center'>
                             <a className='forgot-password' href='#'>
                                 Forgot your password?
@@ -37,10 +38,7 @@ const Login = (props) => {
                         </span>
                         <hr />
                         <div className='text-center'>
-                            <button
-                                className='btn btn-success'
-                                onClick={() => handleCreateNewAccount()}
-                            >
+                            <button className='btn btn-success'>
                                 Create new account
                             </button>
                         </div>
@@ -51,4 +49,4 @@ const Login = (props) => {
     )
 }
 
-export default Login
+export default Register

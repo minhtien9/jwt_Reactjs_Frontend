@@ -1,10 +1,11 @@
-import { useHistory } from 'react-router-dom'
+import React from 'react'
 import './Login.scss'
+import { useHistory } from 'react-router-dom'
 
 const Login = (props) => {
     let history = useHistory()
     const handleCreateNewAccount = () => {
-        history.push('./register')
+        history.push('./')
     }
     return (
         <div className='login-container '>
